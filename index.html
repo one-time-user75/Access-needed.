@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Access Code Required</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Enter Access Code</h2>
+  <input type="text" id="codeInput" placeholder="Access code">
+  <button onclick="checkCode()">Submit</button>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById('codeInput').value.trim();
+      const correctCode = "recogniseme"; // Change this to your secret code
+      const redirectURL = "https://youtube.com/playlist?list=PL-_ddsi7zPPwYlbFDarWxKYZeD-wcCa9H&si=YtmoZpYg7LjsRb0L";
+
+      if (code === correctCode) {
+        window.location.href = redirectURL;
+      } else {
+        alert("Put my phone down plz ;)");
+      }
+    }
+  </script>
+</body>
+</html>
